@@ -1,0 +1,79 @@
+---
+run:
+  tests: true
+  timeout: 30m
+
+linters-settings:
+  exhaustive:
+    default-signifies-exhaustive: true
+  gci:
+    sections:
+      - standard
+      - default
+      - prefix(github.com/go-api-template)
+      - blank
+      - dot
+  goimports:
+    local-prefixes: github.com/go-api-template
+  misspell:
+    ignore-words:
+      - eles
+      - essencial
+      - promocional
+      - validade
+  tagalign:
+    order:
+      - required
+      - envconfig
+      - json
+      - extensions
+      - validate
+      - example
+    sort: true
+  varnamelen:
+    ignore-decls:
+      - i int
+      - j int
+      - k int
+      - x int
+      - rw http.ResponseWriter
+    ignore-names:
+      - db
+      - fn
+      - id
+      - ok
+      - qb
+      - tc
+      - tt
+      - tx
+      - wg
+    ignore-type-assert-ok: true
+
+linters:
+  enable-all: true
+  disable:
+    - cyclop
+    - deadcode # deprecated
+    - depguard
+    - dupl
+    - err113
+    - execinquery # deprecated
+    - exhaustivestruct # deprecated
+    - exhaustruct
+    - funlen
+    - gochecknoglobals
+    - godox
+    - golint # deprecated
+    - gomnd # deprecated
+    - ifshort # deprecated
+    - interfacer # deprecated
+    - ireturn
+    - lll
+    - maintidx
+    - maligned # deprecated
+    - nosnakecase # deprecated
+    - scopelint # deprecated
+    - structcheck # deprecated
+    - tagliatelle
+    - testpackage
+    - varcheck # deprecated
